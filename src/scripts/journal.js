@@ -1,11 +1,11 @@
-const journalEntries = [
-    {
-        "concept": "Array methods",
-        "date": "07/24/2018",
-        "entry": "We learned about array methods, but only forEach made sense",
-        "mood": "Ok"
-    }
-]
+// const journalEntries = [
+//     {
+//         "concept": "Array methods",
+//         "date": "07/24/2018",
+//         "entry": "We learned about array methods, but only forEach made sense",
+//         "mood": "Ok"
+//     }
+// ]
 
 /*
     Purpose: To create, and return, a string template that
@@ -13,29 +13,31 @@ const journalEntries = [
 
     Arguments: journalEntry (object)
 */
-const makeJournalEntryComponent = (journalEntry) => {
-    // Create your own HTML structure for a journal entry
-    return `
+
+
+    const makeJournalEntryComponent = (journalEntry) => {
+        // Create your own HTML structure for a journal entry
+        return `
  <div>${journalEntry.concept}</div>
  <div>${journalEntry.entry}</div>
  <div>${journalEntry.date}</div>
  <div>${journalEntry.mood}</div>
     `
-}
+    }
 
-/*
-    Purpose: To render all journal entries to the DOM
+    /*
+        Purpose: To render all journal entries to the DOM
+    
+        Arguments: entries (array of objects)
+    */
+    const renderJournalEntries = (entries) => {
+        for (entry of journalEntries) {
+            const journalHTML = makeJournalEntryComponent(entry)
+            const journalArticalElement = document.querySelector(".entryLog")
 
-    Arguments: entries (array of objects)
-*/
-const renderJournalEntries = (entries) => {
-for(entry of journalEntries) {
-    const journalHTML = makeJournalEntryComponent(entry)
-    const journalArticalElement = document.querySelector(".entryLog")
+            journalArticalElement.innerHTML += journalHTML
+        }
+    }
 
-    journalArticalElement.innerHTML += journalHTML
-}
-}
-
-// Invoke the render function
-renderJournalEntries(journalEntries)
+    // Invoke the render function
+    renderJournalEntries(journalEntries)
