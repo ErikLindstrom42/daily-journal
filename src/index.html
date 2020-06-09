@@ -7,30 +7,38 @@
     <link rel="stylesheet" href="styles/journal.css">
 </head>
 <body>
+    
     <h1>Daily Journal</h1>
     <form action=""></form>
-        <fieldset>
-            <label for="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" id="journalDate">
-        </fieldset>
-        <fieldset>
-            <label for ="conceptsCovered">Concepts covered</label>
-            <input type="text" name="conceptsCovered" id="conceptsCovered">
-        </fieldset>
-        <fieldset>
-            <label for ="journalEntry">Journal Entry</label>
-            <input type="text box" name="journalEntry" id="journalEntry">
-        </fieldset>
-        <fieldset>
-            <label for ="mood">Mood for the day</label>
-            <select name="mood" id="mood">
-                <option value="awesome">Awesome</option>
-                <option value="okay">Okay</option>
-                <option value="sad">Sad</option>
-
-
-            </select>
-        </fieldset>
-        <button>Record Journal Entry</button>
+    <fieldset>
+        <label for="journalDate">Date of entry</label>
+        <input type="date" name="journalDate" id="journalDate">
+    </fieldset>
+    <fieldset>
+        <label for ="conceptsCovered">Concepts covered</label>
+        <input type="text" name="conceptsCovered" id="conceptsCovered">
+    </fieldset>
+    <fieldset>
+        <label for ="journalEntry">Journal Entry</label>
+        <input type="text box" name="journalEntry" id="journalEntry">
+    </fieldset>
+    <fieldset>
+        <label for ="mood">Mood for the day</label>
+        <select name="mood" id="mood">
+            <option value="awesome">Awesome</option>
+            <option value="okay">Okay</option>
+            <option value="sad">Sad</option>
+            
+            
+        </select>
+    </fieldset>
+    <button>Record Journal Entry</button>
+    
+    <article class="entryLog">
+    </article>
+    <script src="scripts/journal.js"></script>
+    
+    
+    
 </body>
 </html>
