@@ -1,4 +1,4 @@
-const renderJournalEntries = (journalEntries) => {
+export const renderJournalEntries = (journalEntries) => {
     console.log(journalEntries)
     for (entry of journalEntries) {
         const journalHTML = makeJournalEntryComponent(entry)
@@ -8,5 +8,3 @@ const renderJournalEntries = (journalEntries) => {
         console.log(entry)
     }
 }
-
-// Invoke the render function
