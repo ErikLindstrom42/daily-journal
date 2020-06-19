@@ -6,6 +6,6 @@
     to get the data and display it.
 */
 
-API.getJournalEntries()
+getJournalEntries()
 .then((response) => renderJournalEntries(response))
 //objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
