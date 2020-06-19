@@ -1,4 +1,4 @@
-const renderJournalEntries = () => {
+const renderJournalEntries = (journalEntries) => {
     for (entry of journalEntries) {
         const journalHTML = makeJournalEntryComponent(entry)
         const journalArticalElement = document.querySelector(".entryLog")
@@ -8,4 +8,5 @@ const renderJournalEntries = () => {
 }
 
 // Invoke the render function
-renderJournalEntries()
+renderJournalEntries(journalEntries)
+console.log(journalEntries)

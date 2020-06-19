@@ -9,3 +9,4 @@
 getJournalEntries()
 .then((response) => renderJournalEntries(response))
 //objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
+
