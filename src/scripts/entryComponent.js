@@ -1,3 +1,4 @@
+
 const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
     return `
@@ -7,3 +8,5 @@ const makeJournalEntryComponent = (journalEntry) => {
 <div>${journalEntry.mood}</div>
 `
 }
+
+export default makeJournalEntryComponent
