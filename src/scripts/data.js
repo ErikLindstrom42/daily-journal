@@ -1,5 +1,4 @@
-
-export const getJournalEntries = () => {
+const getJournalEntries = () => {
     return fetch("http://localhost:8088/entries").then(
         (response) => {
         
@@ -8,3 +7,5 @@ export const getJournalEntries = () => {
     
 
 }
+
+export default getJournalEntries

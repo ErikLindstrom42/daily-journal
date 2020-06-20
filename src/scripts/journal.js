@@ -1,4 +1,4 @@
-const { getJournalEntries } = require("./data")
+// const { getJournalEntries } = require("./data")
 
 /*
     Main application logic that uses the functions and objects
@@ -7,10 +7,10 @@ const { getJournalEntries } = require("./data")
     Change the fake variable names below to what they should be
     to get the data and display it.
 */
-import getJournalEntries from 'scripts/data.js'
-import renderJournalEntries from 'scripts/entryList.js'
-import getJournalEntries from 'scripts/data.js'
-import makeJournalEntryComponent from 'scripts/entryComponent'
+
+import renderJournalEntries from './entryList.js'
+import getJournalEntries from './data.js'
+
 
 getJournalEntries()
 .then((response) => renderJournalEntries(response))

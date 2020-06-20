@@ -1,4 +1,5 @@
-export const makeJournalEntryComponent = (journalEntry) => {
+
+const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
     return `
 <div>${journalEntry.concept}</div>
@@ -7,3 +8,5 @@ export const makeJournalEntryComponent = (journalEntry) => {
 <div>${journalEntry.mood}</div>
 `
 }
+
+export default makeJournalEntryComponent

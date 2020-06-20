@@ -1,6 +1,8 @@
-export const renderJournalEntries = (journalEntries) => {
+import makeJournalEntryComponent from './entryComponent.js'
+
+const renderJournalEntries = (journalEntries) => {
     console.log(journalEntries)
-    for (entry of journalEntries) {
+    for (const entry of journalEntries) {
         const journalHTML = makeJournalEntryComponent(entry)
         const journalArticalElement = document.querySelector(".entryLog")
 
@@ -8,3 +10,4 @@ export const renderJournalEntries = (journalEntries) => {
         console.log(entry)
     }
 }
+export default renderJournalEntries
