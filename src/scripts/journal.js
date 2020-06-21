@@ -9,10 +9,64 @@
 */
 
 import renderJournalEntries from './entryList.js'
-import getJournalEntries from './data.js'
+import API from './data.js'
+import newJournalObject from './createEntry.js'
+import makeJournalEntryComponent from './entryComponent.js'
 
-
-getJournalEntries()
+API.getJournalEntries()
 .then((response) => renderJournalEntries(response))
 //objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
 
+let journalDate
+let conceptsCovered
+let entry
+let mood
+
+
+
+// journalDate = document.querySelector("#journalDate").value
+// conceptsCovered = document.querySelector("#conceptsCovered").value
+// entry = document.querySelector("#journalEntry").value
+// mood = document.querySelector("#mood").value
+
+const journalTestObject = newJournalObject(journalDate,conceptsCovered,entry,mood)
+
+
+
+
+
+const recordButtonFunction = () =>  {
+    
+    
+    const journalDate = document.querySelector("#journalDate").value
+    const conceptsCovered = document.querySelector("#conceptsCovered").value
+    const entry = document.querySelector("#journalEntry").value
+    const mood = document.querySelector("#mood").value
+    console.log (journalDate, conceptsCovered, entry, mood)
+    
+    const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
+    API.saveJournalEntries(finalEntry).then(() => {
+        return API.getJournalEntries()
+    }).then((domObject) => {
+        return makeJournalEntryComponent(domObject)
+    })
+}
+document.getElementById("recordButton").addEventListener("click", recordButtonFunction);
+// if(date === "" || concepts entry === "" 
+
+
+
+
+
+
+
+
+
+
+
+
+// document.getElementById("recordButton").addEventListener("click", displayDate);
+
+// function displayDate() {
+//   alert("Eureka")
+// }
