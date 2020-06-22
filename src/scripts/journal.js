@@ -13,8 +13,6 @@ import API from './data.js'
 import newJournalObject from './createEntry.js'
 import makeJournalEntryComponent from './entryComponent.js'
 
-API.getJournalEntries()
-.then((response) => renderJournalEntries(response))
 //objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
 
 
@@ -24,32 +22,45 @@ API.getJournalEntries()
 // const recordButtonFunction = () =>  {
     
     
-//     const journalDate = document.querySelector("#journalDate").value
-//     const conceptsCovered = document.querySelector("#conceptsCovered").value
-//     const entry = document.querySelector("#journalEntry").value
-//     const mood = document.querySelector("#mood").value
+    //     const journalDate = document.querySelector("#journalDate").value
+    //     const conceptsCovered = document.querySelector("#conceptsCovered").value
+    //     const entry = document.querySelector("#journalEntry").value
+    //     const mood = document.querySelector("#mood").value
     
-//     const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
-//  API.saveJournalEntry(finalEntry).then(API.getJournalEntries()
-// .then(makeJournalEntryComponent()))
-// console.log("HELP ME")
-
+    //     const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
+    //  API.saveJournalEntry(finalEntry).then(API.getJournalEntries()
+    // .then(makeJournalEntryComponent()))
+    // console.log("HELP ME")
+    
+    API.getJournalEntries()
+        .then((response) => renderJournalEntries(response))
 // }
 document.getElementById("recordButton").addEventListener("click", event => {
     const journalDate = document.querySelector("#journalDate").value
     const conceptsCovered = document.querySelector("#conceptsCovered").value
     const entry = document.querySelector("#journalEntry").value
     const mood = document.querySelector("#mood").value
-    
-//latest
-const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
-API.saveJournalEntry(finalEntry).then(API.getJournalEntries())
-.then(makeJournalEntryComponent())
-} );
-// if(date === "" || concepts entry === "" 
+
+    //latest
+    // const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
+    // API.saveJournalEntry(finalEntry).then(API.getJournalEntries())
+    // .then(makeJournalEntryComponent())
 
 
+    const finalEntry = newJournalObject(journalDate, conceptsCovered, entry, mood)
+    const allEntries = () => {
+        API.getJournalEntries()
+            .then((entries) => {
+                renderJournalEntries(entries)
+            })
+    }
 
+    API.saveJournalEntry(finalEntry)
+        .then(() => {
+            allEntries()
+
+        })
+})
 // const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
 // API.saveJournalEntry(finalEntry).then((API.getJournalEntries()
 // .then(makeJournalEntryComponent(domObject))))
