@@ -1,9 +1,10 @@
 import makeJournalEntryComponent from './entryComponent.js'
 
 const renderJournalEntries = (journalEntries) => {
-    console.log(journalEntries)
 
-    
+
+    document.querySelector(".entryLog").innerHTML = ""
+
     for (const entry of journalEntries) {
         const journalHTML = makeJournalEntryComponent(entry)
         const journalArticalElement = document.querySelector(".entryLog")

@@ -1,67 +1,18 @@
 {
   "entries": [
     {
-      "journalDate": "2020-06-10",
-      "conceptsCovered": "",
-      "entry": "",
+      "journalDate": "2020-06-02",
+      "conceptsCovered": "1111",
+      "entry": "2222",
       "mood": "Awesome",
+      "id": 1
+    },
+    {
+      "journalDate": "2020-06-17",
+      "conceptsCovered": "1111",
+      "entry": "1111",
+      "mood": "Sad",
       "id": 2
-    },
-    {
-      "journalDate": "",
-      "conceptsCovered": "",
-      "entry": "",
-      "mood": "Awesome",
-      "id": 3
-    },
-    {
-      "journalDate": "",
-      "conceptsCovered": "",
-      "entry": "",
-      "mood": "Awesome",
-      "id": 4
-    },
-    {
-      "journalDate": "2020-06-16",
-      "conceptsCovered": "1111",
-      "entry": "2222",
-      "mood": "Awesome",
-      "id": 5
-    },
-    {
-      "journalDate": "2020-06-10",
-      "conceptsCovered": "1111",
-      "entry": "2222",
-      "mood": "Awesome",
-      "id": 6
-    },
-    {
-      "journalDate": "",
-      "conceptsCovered": "",
-      "entry": "",
-      "mood": "Awesome",
-      "id": 7
-    },
-    {
-      "journalDate": "",
-      "conceptsCovered": "",
-      "entry": "",
-      "mood": "Awesome",
-      "id": 8
-    },
-    {
-      "journalDate": "",
-      "conceptsCovered": "",
-      "entry": "",
-      "mood": "Awesome",
-      "id": 9
-    },
-    {
-      "journalDate": "",
-      "conceptsCovered": "",
-      "entry": "",
-      "mood": "Awesome",
-      "id": 10
     }
   ]
 }

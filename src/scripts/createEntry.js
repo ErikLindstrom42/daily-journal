@@ -1,11 +1,11 @@
-//Pulls data from fields
+//Pulls data from fields, factory function
 
 const newJournalObject = (date, concept, entry, mood) => {
     const newEntryObject = {
-        journalDate: date,
-        conceptsCovered: concept,
-        entry: entry,
-        mood: mood
+        "journalDate": date,
+        "conceptsCovered": concept,
+        "entry": entry,
+        "mood": mood
     }
     return newEntryObject
 }

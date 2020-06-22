@@ -17,48 +17,47 @@ API.getJournalEntries()
 .then((response) => renderJournalEntries(response))
 //objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
 
-let journalDate
-let conceptsCovered
-let entry
-let mood
-
-
-
-// journalDate = document.querySelector("#journalDate").value
-// conceptsCovered = document.querySelector("#conceptsCovered").value
-// entry = document.querySelector("#journalEntry").value
-// mood = document.querySelector("#mood").value
-
-const journalTestObject = newJournalObject(journalDate,conceptsCovered,entry,mood)
 
 
 
 
-
-const recordButtonFunction = () =>  {
+// const recordButtonFunction = () =>  {
     
     
+//     const journalDate = document.querySelector("#journalDate").value
+//     const conceptsCovered = document.querySelector("#conceptsCovered").value
+//     const entry = document.querySelector("#journalEntry").value
+//     const mood = document.querySelector("#mood").value
+    
+//     const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
+//  API.saveJournalEntry(finalEntry).then(API.getJournalEntries()
+// .then(makeJournalEntryComponent()))
+// console.log("HELP ME")
+
+// }
+document.getElementById("recordButton").addEventListener("click", event => {
     const journalDate = document.querySelector("#journalDate").value
     const conceptsCovered = document.querySelector("#conceptsCovered").value
     const entry = document.querySelector("#journalEntry").value
     const mood = document.querySelector("#mood").value
     
-    const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
-    API.saveJournalEntry(finalEntry).then(() => {
-        API.getJournalEntries()
-    }).then((domObject) => {
-        makeJournalEntryComponent(domObject)
-    })
-}
-document.getElementById("recordButton").addEventListener("click", recordButtonFunction);
+//latest
+const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
+API.saveJournalEntry(finalEntry).then(API.getJournalEntries())
+.then(makeJournalEntryComponent())
+} );
 // if(date === "" || concepts entry === "" 
 
 
 
+// const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
+// API.saveJournalEntry(finalEntry).then((API.getJournalEntries()
+// .then(makeJournalEntryComponent(domObject))))
 
-
-
-
+// //latest
+// const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
+// API.saveJournalEntry(finalEntry).then(API.getJournalEntries())
+// .then(makeJournalEntryComponent())
 
 
 
