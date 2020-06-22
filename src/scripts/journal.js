@@ -42,13 +42,12 @@ const recordButtonFunction = () =>  {
     const conceptsCovered = document.querySelector("#conceptsCovered").value
     const entry = document.querySelector("#journalEntry").value
     const mood = document.querySelector("#mood").value
-    console.log (journalDate, conceptsCovered, entry, mood)
     
     const finalEntry = newJournalObject(journalDate,conceptsCovered,entry,mood)
-    API.saveJournalEntries(finalEntry).then(() => {
-        return API.getJournalEntries()
+    API.saveJournalEntry(finalEntry).then(() => {
+        API.getJournalEntries()
     }).then((domObject) => {
-        return makeJournalEntryComponent(domObject)
+        makeJournalEntryComponent(domObject)
     })
 }
 document.getElementById("recordButton").addEventListener("click", recordButtonFunction);

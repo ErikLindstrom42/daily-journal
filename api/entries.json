@@ -1,11 +1,67 @@
 {
-    "entries": [
+  "entries": [
     {
-        "id":1,
-        "concept": "Array methods",
-        "date": "07/24/2018",
-        "entry": "We learned about array methods, but only forEach made sense",
-        "mood": "Ok"
+      "journalDate": "2020-06-10",
+      "conceptsCovered": "",
+      "entry": "",
+      "mood": "Awesome",
+      "id": 2
+    },
+    {
+      "journalDate": "",
+      "conceptsCovered": "",
+      "entry": "",
+      "mood": "Awesome",
+      "id": 3
+    },
+    {
+      "journalDate": "",
+      "conceptsCovered": "",
+      "entry": "",
+      "mood": "Awesome",
+      "id": 4
+    },
+    {
+      "journalDate": "2020-06-16",
+      "conceptsCovered": "1111",
+      "entry": "2222",
+      "mood": "Awesome",
+      "id": 5
+    },
+    {
+      "journalDate": "2020-06-10",
+      "conceptsCovered": "1111",
+      "entry": "2222",
+      "mood": "Awesome",
+      "id": 6
+    },
+    {
+      "journalDate": "",
+      "conceptsCovered": "",
+      "entry": "",
+      "mood": "Awesome",
+      "id": 7
+    },
+    {
+      "journalDate": "",
+      "conceptsCovered": "",
+      "entry": "",
+      "mood": "Awesome",
+      "id": 8
+    },
+    {
+      "journalDate": "",
+      "conceptsCovered": "",
+      "entry": "",
+      "mood": "Awesome",
+      "id": 9
+    },
+    {
+      "journalDate": "",
+      "conceptsCovered": "",
+      "entry": "",
+      "mood": "Awesome",
+      "id": 10
     }
-]
+  ]
 }
