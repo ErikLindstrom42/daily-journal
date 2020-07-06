@@ -1,4 +1,5 @@
 import makeJournalEntryComponent from './entryComponent.js'
+import registerListeners from './events.js'
 
 const renderJournalEntries = (journalEntries) => {
 
@@ -11,6 +12,7 @@ const renderJournalEntries = (journalEntries) => {
 
         journalArticalElement.innerHTML += journalHTML
         console.log(entry)
+        registerListeners()
     }
 }
 export default renderJournalEntries
