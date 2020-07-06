@@ -11,7 +11,10 @@
 <body>
 
     <h1>Daily Journal</h1>
+
+    <!-- does this even need to have an action? -->
     <form action="">
+        <input type= "hidden" id="entryId" value="" />
         <fieldset>
             <label for="journalDate">Date of entry</label>
             <input type="date" name="journal" id="journalDate">
@@ -29,25 +32,28 @@
             <select name="mood" id="mood">
                 <option value="Awesome">Awesome</option>
                 <option value="Okay">Okay</option>
-                <option value="Sad">Sad</option>
-
-
+                <option value="Sad">Sad</option>                
             </select>
-            <form class = "recordButton" action="">
+            <form class="recordButton" action="">
                 <input type="button" id="recordButton" value="Record Entry">
-                </form>
-
-            <!-- <button id="recordButton">Record Journal Entry</button> -->
+            </form>
+            <form class="editButton" action="">
+                <input type="button" id="editButton" value="edit Entry">
+            </form>
+            
+ 
         </fieldset>
+
     </form>
-    <article class="entryLog">
+                        
+    <article class="entryLog" id = "entryLog">
     </article>
-    
-    
 
 
 
-    <script type = "module" src ="scripts/journal.js"></script>
+
+
+    <script type="module" src="scripts/journal.js"></script>
 
 
 </body>

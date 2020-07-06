@@ -1,19 +1,22 @@
+const url = "http://localhost:8088"
+
 
 
 
 const API = {
     getJournalEntries() {
-    return fetch("http://localhost:8088/entries").then(
+    return fetch(`${url}/entries`).then(
         (response) => {
         
             return response.json()
+            console.log(get)
         } )
     
     },
 
 
   saveJournalEntry(newEntryObject) {
-        return fetch("http://localhost:8088/entries", {
+        return fetch(`${url}/entries`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -22,7 +25,4 @@ const API = {
         })
     }
 }
-
-//export default API
 export default API
-
